@@ -1,0 +1,743 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+      <!-- // -->
+      <!-- hero section -->
+      {% block hero %}
+      <section class="demo-1-hero rg-bg-z">
+         <div class="container">
+            <div class="row vcenter">
+               <div class="col-lg-6">
+                  <div class="hero-content">
+                     <!--<span class="subtitleheading" data-cue="slideInUp" data-delay="100">✦ The Rundal Template</span>-->
+                     <h1 data-cue="slideInUp" data-delay="400">¿Quienes somos?</h1>
+                     <p class="mt20" data-cue="slideInUp" data-delay="600">La Asociación Vizcaína de Diabetes (en adelante, ASVIDIA) se fundó en 1978 por parte de varias personas relacionadas con la diabetes, que vieron la necesidad de crear una estructura que ofreciera apoyo y educación a las personas con diabetes de Bizkaia.
+
+                        Los artífices de la fundación fueron D. Pedro Martul (Endocrinólogo Pediatra), Dña. Clara Marlasca (Enfermera Educadora), D. Juan Luis Camacho (Representante de un laboratorio farmacéutico) y D. José Antonio Vázquez (Endocrinólogo). Las primeras reuniones tuvieron lugar en el Departamento de Pediatría del Hospital de Cruces y una de las primeras actividades fue realizar una colonia de verano para niños  en Estella (Navarra) en verano de 1979.
+                        
+                        Después de pasar por varias sedes (en las calles María Díaz de Haro y Autonomía), la Diputación Foral de Bizkaia cedió a la Asociación el local que ocupa actualmente, en la calle Iparraguirre, 46.
+                        
+                        A lo largo de todos estos años, ASVIDIA ha tenido como único objetivo ayudar a las personas con diabetes de Bizkaia, proporcionando la necesaria educación diabetológica. Por este motivo  fue declarada “Entidad de Utilidad Pública” por el Gobierno Vasco en 2003. Además, la relación directa y cordial de ASVIDIA tanto con los hospitales vizcaínos como con los endocrinos y educadores en general, nos ha permitido ofrecer a los socios una serie de actividades adecuadamente supervisadas, por un amplio equipo médico, así como por un completo y formado grupo de monitores propios, que ASVIDIA mantiene como colaboradores desde hace años.
+                        
+                        Actualmente, ASVIDIA abre sus puertas a los socios de lunes a jueves por las tardes y los viernes por la mañana. El personal fijo se compone de dos secretarias que se encargan de la labor administrativa del día a día. Su órgano ejecutivo es una Junta Directiva compuesta por personas que cubren las distintas sensibilidades de los socios y que se reúne mensualmente.</p>
+                     <div class="pair-btn mt30" data-cues="slideInUp" data-delay="800">
+                        <a href="#" class="r-g-btn r-g-btn-1">Get Started </a>
+                        <a href="#" class="inine-btn">How It Works</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 mmt40">
+                  <div class="hero-img" data-cue="fadeIn" data-delay="400"><img src="{% static 'website/images/gallery/Asvidia.jpg' %}" alt="img" class="img-fluid"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- // -->
+      <!-- roll text -->
+      
+      <!--// roll text -->
+      <!--about section -->
+      {% block about %}
+      <section class="about-company sec-pad rg-bg-a padding-top-150">
+         <div class="container">
+            <div class="row justify-content-between">
+               <div class="col-lg-5">
+                  <h2>Agency that Drives Growth through User Experience</h2>
+               </div>
+               <div class="col-lg-6 padding-left-80">
+                  <div class="coutner-set" data-cues="slideInUp" data-delay="400">
+                     <div class="counterdiv">
+                        <p class="rg-num"><span>10</span>+</p>
+                        <p>Years of<br> Experience</p>
+                     </div>
+                     <div class="counterdiv">
+                        <p class="rg-num"><span>40</span>+</p>
+                        <p>Team<br> Members</p>
+                     </div>
+                     <div class="counterdiv">
+                        <p class="rg-num"><span>100</span>%</p>
+                        <p>Customer<br> Satisfaction</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div  class="row mt100">
+               <div class="col-lg-6 mt30 position-relative">
+                  <div class="ct-index">
+                     <div class="round-text">
+                        <img src="{% static 'website/images/common/circled-text.svg' %}" alt="logo" class="texts">
+                        <img src="{% static 'website/images/common/circle-logo.png' %}" alt="logo" class="innerlogo">
+                     </div>
+                  </div>
+                  <div class="two-image dot-image">
+                     <div class="image--1 roundimg-x shadow" data-cue="slideInLeft" data-delay="100">  <img src="{% static 'website/images/common/office-1.jpg' %}" alt="about">  </div>
+                     <div class="image--2 roundimg-x shadow" data-cue="slideInRight" data-delay="300">  <img src="{% static 'website/images/common/office-2.jpg' %}" alt="about">  </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 mt30 padding-left-80 mmt40">
+                  <div class="aboutdiv" data-cues="slideInUp" data-delay="100">
+                     <h2>Award winning mobile app Development Company</h2>
+                     <h5 class="mt15 italic">#1 App Development Company India. We build Innovative, User-Friendly & Results Driven Apps.</h5>
+                     <p class="mt15">"Company Name" is a premier IT solutions providing specialized services in Android, iPhone/iPad/iPod, BlackBerry, Windows Mobile, J2ME, and Symbian Mobile Application Development. Our company develops mobile application solutions for multimedia, communication, office, banking and finance, and a variety of other needs</p>
+                     <a href="#" class="r-g-btn r-g-btn-1 mt30">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- portoflio -->
+      {% block portflio %}
+      <section class="sec-pad position-relative rg-bg-0">
+         <img src="{% static 'website/images/shape/shape-1.png' %}" class="shape11 imshp" alt="#">
+         <img src="{% static 'website/images/shape/shape-2.png' %}" class="shape22 imshp" alt="#">
+         <div class="container index-up">
+            <div class="row">
+               <div class="col-lg-6">
+                  <h2>Customized On Demand <span class="light-et">Web & App Development</span> Services</h2>
+                  <p class="mt15">We are a Web development company. we provide web design, app development, digital marketing services.</p>
+               </div>
+               <div class="col-lg-4">
+               </div>
+            </div>
+            <div class="row mt30 swcards" data-cues="slideInUp" data-delay="100">
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-1.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/browser.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Web Design </h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-2.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/discord.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Game Development</h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-3.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/website.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Web Development</h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-4.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/buy.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Ecommerce Solutions</h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-5.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/work.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Cloud Solution</h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="r-g-card shadow cardbg swhovr" data-background="{% static 'website/images/shape/line-bg-6.svg' %}">
+                     <div class="pair-btwn">
+                        <div class="imagesicons">  <img src="{% static 'website/images/icons/grow.png' %}" alt="icon">  </div>
+                        <div class="cardlabl">
+                           <p><span>Start From</span>$20/Hour</p>
+                        </div>
+                     </div>
+                     <div class="card-usefor">
+                        <h3>Digital Marketing </h3>
+                        <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                     </div>
+                     <a href="#" class="inine-btn">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- technology slider -->
+         <div class="technology-slider owl-carousel mt100">
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/android.svg' %}"
+                        alt="Android"> </div>
+                     <div class="iwt-content">
+                        <p>Android </p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/aws.svg' %}"
+                        alt="aws"> </div>
+                     <div class="iwt-content">
+                        <p>aws</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/figma.svg' %}"
+                        alt="figma"> </div>
+                     <div class="iwt-content">
+                        <p>figma</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/firebase.svg' %}"
+                        alt="firebase"> </div>
+                     <div class="iwt-content">
+                        <p>firebase</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/flutter.svg' %}"
+                        alt="flutter"> </div>
+                     <div class="iwt-content">
+                        <p>flutter</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/Google-cloud.svg' %}"
+                        alt="Google-cloud"> </div>
+                     <div class="iwt-content">
+                        <p>Google-cloud</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/illustrator.svg' %}"
+                        alt="illustrator"> </div>
+                     <div class="iwt-content">
+                        <p>illustrator</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/java.svg' %}" alt="java">
+                     </div>
+                     <div class="iwt-content">
+                        <p>Java</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/Kotlin.svg' %}"
+                        alt="Kotlin"> </div>
+                     <div class="iwt-content">
+                        <p>Kotlin</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/magento.svg' %}"
+                        alt="magento"> </div>
+                     <div class="iwt-content">
+                        <p>magento</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/Node.js.svg' %}" alt="Node.js">
+                     </div>
+                     <div class="iwt-content">
+                        <p>Node.js</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/Photoshop.svg' %}" alt="Photoshop">
+                     </div>
+                     <div class="iwt-content">
+                        <p>Photoshop</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/python.svg' %}" alt="python">
+                     </div>
+                     <div class="iwt-content">
+                        <p>python</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/react.svg' %}" alt="react">
+                     </div>
+                     <div class="iwt-content">
+                        <p>react</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/sketch.svg' %}" alt="sketch">
+                     </div>
+                     <div class="iwt-content">
+                        <p>sketch</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/sqlite.svg' %}" alt="sqlite">
+                     </div>
+                     <div class="iwt-content">
+                        <p>sqlite</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/swift.svg' %}" alt="swift">
+                     </div>
+                     <div class="iwt-content">
+                        <p>swift</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="iconslider">
+               <div class="icon-with-title">
+                  <a href="javascript:void(0)">
+                     <div class="iwt-icon"> <img src="{% static 'website/images/tech-icons/xd.svg' %}" alt="xd">
+                     </div>
+                     <div class="iwt-content">
+                        <p>xd</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- // -->
+
+      <!-- why choose us block -->
+      {% block chooseus %}
+      <section class="why-choose-us sec-pad">
+         <div class="container">
+            <div class="row vcenter">
+               <div class="col-lg-6 padding-right-80">
+                  <div class="r-g-imgcard" data-cue="slideInLeft" data-delay="100">
+                     <img src="{% static 'website/images/common/workwith.svg' %}" alt="img">
+                  </div>
+               </div>
+               <div class="col-lg-6 mmt40">
+                  <span class="subtitleheading">✦ Why Choose Us</span>                 
+                  <h2 class="mt15">We are obsessed about your <span class="light-et">business</span> and  your customer</h2>
+                  <p class="mt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+
+                  <div class="r-g-featurelist mt30" data-cues="slideInUp" data-delay="100">
+                     <div class="numbermedia media">
+                        <div class="numbericons">1</div>
+                        <div class="contentfornumber">
+                           <h4>We provide solutions and free consultation.</h4>
+                        </div>
+                     </div>
+                     <div class="numbermedia media">
+                        <div class="numbericons">2</div>
+                        <div class="contentfornumber">
+                           <h4>We deliver based on your schedule Time.</h4>
+                        </div>
+                     </div>
+                     <div class="numbermedia media">
+                        <div class="numbericons">3</div>
+                        <div class="contentfornumber">
+                           <h4>We do provide very detailed analysis before start project.</h4>
+                        </div>
+                     </div>
+                     <div class="numbermedia media">
+                        <div class="numbericons">4</div>
+                        <div class="contentfornumber">
+                           <h4>All website that we build must be SEO friendly.</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="pair-btn mt30" data-cues="slideInUp" data-delay="100">
+                     <a href="#" class="r-g-btn r-g-btn-2 ">Start Your Project</a>    
+                     <a href="#" class="dialnumber"><span>or Call Us</span>+91 123 4567 890</a>              
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- // -->
+
+      <!-- portfolio block -->
+      {% block portfolio %}
+      <section class="portfolio-home sec-pad rg-bg-1">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5">
+                  <h2>Our Selected <span class="light-et">Works</span></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+               </div>
+            </div>
+            <div class="row mt30 justify-content-center" data-cues="slideInUp" data-delay="100">
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="{% static 'website/images/portfolio/app1.jpg' %}" alt="portflio"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Investment App</h3>
+                              <p>Flutter App Development</p>
+                           </div>
+                           <div class="linkforopen">
+                              <p class="animation"><i class="fa-solid fa-arrow-right-long"></i></p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="{% static 'website/images/portfolio/app2.jpg' %}" alt="portflio"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Online Fashion Store</h3>
+                              <p>Web App Development</p>
+                           </div>
+                           <div class="linkforopen">
+                              <p class="animation"><i class="fa-solid fa-arrow-right-long"></i></p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="{% static 'website/images/portfolio/app3.jpg' %}" alt="portflio"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Grocery Store Website</h3>
+                              <p>E-Commerce Development</p>
+                           </div>
+                           <div class="linkforopen">
+                              <p class="animation"><i class="fa-solid fa-arrow-right-long"></i></p>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- Feature Points -->
+      {% block featurepoints %}
+      <section class="why-choose-us sec-pad">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <h2>More reasons companies around the world chooses Rundal</h2>
+                  <p class="mt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+               </div>
+            </div>
+            <div class="row mt30" data-cues="slideInUp" data-delay="200">
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="r-g-card rgnl1 shadow unniqbg" data-background="{% static 'website/images/shape/line-bg-7.svg' %}">
+                     <div class="icondiv"><img src="{% static 'website/images/icons/target.png' %}" alt="img"></div>
+                     <div class="datadiv">
+                        <h3><span>Target Audience</span> 20.5K</h3>
+                        <p>We provide solutions and free consultation.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="r-g-card rgnl2 shadow unniqbg" data-background="{% static 'website/images/shape/line-bg-8.svg' %}">
+                     <div class="icondiv"><img src="{% static 'website/images/icons/discount.png' %}" alt="img"></div>
+                     <div class="datadiv">
+                        <h3><span>Growth in Sale</span> 98.2%</h3>
+                        <p>We provide solutions and free consultation.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="r-g-card rgnl3 shadow unniqbg" data-background="{% static 'website/images/shape/line-bg-9.svg' %}">
+                     <div class="icondiv"><img src="{% static 'website/images/icons/transaction.png' %}" alt="img"></div>
+                     <div class="datadiv">
+                        <h3><span>Money Saving</span> 20.5k</h3>
+                        <p>We provide solutions and free consultation.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="r-g-card rgnl4 shadow unniqbg" data-background="{% static 'website/images/shape/line-bg-10.svg' %}">
+                     <div class="icondiv"><img src="{% static 'website/images/icons/marketings.png' %}" alt="img"></div>
+                     <div class="datadiv">
+                        <h3><span>Advertising Campaign</span> 75.2K</h3>
+                        <p>We provide solutions and free consultation.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- // -->
+
+      <!-- CTA Block -->
+      {% block CTA %}
+      <div class="container">
+         <div class="cta-block shadow cta-bg" data-background="{% static 'website/images/shape/cta-bg-1.svg' %}">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="divblockcta">
+                     <div class="cta-textblock">
+                        <h2>Get a Digital Solution For Your Company That is Made Just For You.</h2>
+                        <a href="#" class="r-g-btn r-g-btn-1 mt30 mt30">Start Your Free Trial</a>
+                     </div>
+                     <div class="ctaimgblock">
+                        <p>We have a skilled tech-savvy team of developers that works on clients' projects efficiently and delivers the project right on time.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endblock %}
+      <!-- // -->
+
+      <!-- customer review -->
+      {% block customer %}
+      <section class="customer-reviews sec-pad">
+         <div class="container">
+            <div class="row vcenter">
+               <div class="col-lg-5">
+                  <span class="subtitleheading">✦ Testimonials</span>
+                  <h2>We Treat Our Clients Like Business Partners</h2>
+                  <p class="mt15">Every client at Rundal has a close relationship with one of our developers. The entire process is tailored to the client, and we only take on a client if we believe we can thrive together.</p>
+                  <h4 class="mt60">Read more real review on the internet</h4>
+                  <div class="review-links" data-cues="slideInUp" data-delay="200">
+                     <a href="#"><img src="{% static 'website/images/icons/Google-Reviews.png' %}" alt="#"> </a>                     
+                     <a href="#"><img src="{% static 'website/images/icons/trustpilot-logo.png' %}" alt="#"> </a>                     
+                     <a href="#"><img src="{% static 'website/images/icons/fbreview.png' %}" alt="#"> </a>                                            
+                  </div>
+               </div>
+               <div class="col-lg-6 position-relative padding-left-80 mmt40">
+                  <!-- owl carousel custom button -->
+                  <div class="customNavigation customplace1">
+                     <a class="btn customNextBtn" data-cue="zoomIn" data-delay="100"><i class="fa-solid fa-arrow-left-long"></i></a>
+                     <a class="btn customPreviousBtn" data-cue="zoomIn" data-delay="400"><i class="fa-solid fa-arrow-right-long"></i></a>
+                  </div>
+                  <!-- owl carousel slider -->
+                  <div class="review-slider owl-carousel dot-image p-0">
+                     <div class="reviews-cards">
+                        <div class="reviewcard">
+                           <div class="reviewerrimg"><img src="{% static 'website/images/team/team-1.jpg' %}" alt="img" class="roundimg"></div>
+                           <div class="reviewcontent shadow">
+                              <div class="star-rate">
+                                 <ul>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                 </ul>
+                              </div>
+                              <div class="review-text">
+                                 <p>I could probably go into sales for you. I'm good to go. If you want real marketing that works and effective implementation - web design's got you covered. Web design is exactly what our business has been lacking.</p>
+                              </div>
+                              <div class="reviewer-text">
+                                 <h4>Petey Cruiser</h4>
+                                 <p>Grocery Business Owner</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviews-cards">
+                        <div class="reviewcard">
+                           <div class="reviewerrimg"><img src="{% static 'website/images/team/team-2.jpg' %}" alt="img" class="roundimg"></div>
+                           <div class="reviewcontent shadow">
+                              <div class="star-rate">
+                                 <ul>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                    <li> <a href="javascript:void(0)" class="chked"><i class="fa-solid fa-star"></i></a> </li>
+                                 </ul>
+                              </div>
+                              <div class="review-text">
+                                 <p>I will let my mum know about this, she could really make use of web design! I could probably go into sales for you. We can't understand how we've been living without web design. Thank You!</p>
+                              </div>
+                              <div class="reviewer-text">
+                                 <h4>Mike Happy</h4>
+                                 <p>NewYork Times</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      {% endblock %}
+      <!-- blog blocks -->
+      {% block blog %}
+      <div class="bloghomediv sec-pad rg-bg-0">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <span class="subtitleheading">✦ Latest from Blog</span>
+                  <h2>We Love To Share Our Learnings</h2>
+               </div>
+            </div>
+            <div class="row mt30" data-cues="slideInUp" data-delay="200">
+               <div class="col-lg-6 mt30">
+                  <div class="half-blog-card swhovr">
+                     <div class="half-blog-img"> <a href="#"><img src="{% static 'website/images/blogs/blogs1.png' %}" alt="blogs" class="img-fluid"> </a> </div>
+                     <div class="half-blog-content">
+                        <div class="blog-quick-inf mb15"><span>12 July 22</span> <span>5 Min Read</span> </div>
+                        <a href="javascript:void(0)" class="mb20 btitle">Finding the best social media platform for your audience and business</a>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget	dolor. Aenean massa.</p>
+                        <a href="#" class="inine-btn mt20">Read More</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 mt30">
+                  <div class="paircardrow">
+                     <div class="half-blog-card swhovr">
+                        <div class="half-blog-content">
+                           <div class="blog-quick-inf mb15"><span>18 July 22</span> <span>5 Min Read</span> </div>
+                           <a href="javascript:void(0)" class="mb20 btitle">An introduction to the principles of data collection and analysis in each digital channel</a>
+                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget	dolor. Aenean massa. </p>
+                           <a href="#" class="inine-btn mt20">Read More</a>
+                        </div>
+                     </div>
+                     <div class="half-blog-card swhovr">
+                        <div class="half-blog-content">
+                           <div class="blog-quick-inf mb15"><span>25 July 22</span> <span>5 Min Read</span> </div>
+                           <a href="javascript:void(0)" class="mb20 btitle">How to Elevate Brand Stories So They Pack an Emotional Punch</a>
+                           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget	dolor. Aenean massa. </p>
+                           <a href="#" class="inine-btn mt20">Read More</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endblock %}
+      <!-- // -->
+
+      <!-- roll text -->
+      {% block textroll %}
+      <div class="separatewebhranimation  menusw">
+         <div class="marquee__inner animation-2" aria-hidden="true">
+            <ul class="marquee-item-list">
+               <li><span>We Build Brands</span><span class="alternate">✦</span></li>
+               <li><span>Focus on Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Grow Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Build Your Audience</span><span class="alternate">✦</span></li>
+               <li><span>Gain More Traffic</span><span class="alternate">✦</span></li>
+               <li><span>Increase Brand Awareness</span><span class="alternate">✦</span></li>
+               <li><span>Develop Global Presence</span><span class="alternate">✦</span></li>
+               <li><span>We Build Brands</span><span class="alternate">✦</span></li>
+               <li><span>Focus on Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Grow Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Build Your Audience</span><span class="alternate">✦</span></li>
+               <li><span>Gain More Traffic</span><span class="alternate">✦</span></li>
+               <li><span>Increase Brand Awareness</span><span class="alternate">✦</span></li>
+               <li><span>Develop Global Presence</span><span class="alternate">✦</span></li>
+            </ul>
+         </div>
+      </div>
+      {% endblock %}
+      <!--// roll text -->
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>--> 
+
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+
+   <link rel="stylesheet" type="text/css" href="{% static 'website/css/mapDevol.css' %}">
+   <link rel="stylesheet" type="text/css" href="Leaflet-Minimap-master/dist/Control.MiniMap.min.css"
+
+    <title>Mapa General</title>
+    <h1>Encuentre su localización</h1>
+
+    <select name="select-location" id="select-location">
+        <option value="-1">Seleccionar la zona deseada</option>
+        <option value="37.38264,-5.996295">Sevilla [Andalucía]</option>
+        <option value="41.65629,-0.8765379">Zaragoza [Aragón]</option>
+        <option value="43.36026,-5.844759">Oviedo [Asturias]</option>
+        <option value="28.12482,-15.43001">Palmas de Gran Canaria (Las) [Islas Canarias]</option>
+        <option value="43.46096,-3.807934">Santander [Cantabria]</option>
+        <option value="39.85678,-4.024476">Toledo [Castilla-La Mancha] </option>
+        <option value="41.65295,-4.728388">Valladolid [Castilla y León]</option>
+        <option value="41.38792,2.169919">Barcelona [Cataluña]</option>
+        <option value="38.91586,-6.345606">Mérida [Extremadura]</option>
+        <option value="43.37087,-8.395835">Coruña (A) [Galicia]</option>
+        <option value="39.56951,2.649966">Palma [Islas Baleares]</option>
+        <option value="42.46577,-2.449995">Logroño [La Rioja]</option>
+        <option value="40.41669,-3.700346">Madrid [Madrid]</option>
+        <option value="37.98344,-1.12989">Murcia [Murcia]</option>
+        <option value="42.81721,-1.646767">Pamplona [Navarra]</option>
+        <option value="42.84641,-2.667893">Vitoria [País Vasco]</option>
+        <option value="39.47024,-0.3768049">Valencia [Comunidad Valenciana]</option>
+    </select>
+
+    <!--<button onclick="dibujoLínea()">Linea</button>-->
+
+</head>
+<body>
+
+    <div id="mapDevol">
+        
+    </div>
+    <div id="linea" style="position:absolute;">
+    
+    </div>
+
+    <!--<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>-->
+   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+   integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+   crossorigin=""></script>
+   <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>
+   <script src="{% static 'website/js/mapDevol.js' %}"></script>
+   <script src="{% static 'website/js/linea.js' %}"></script>
+    
+</body>
+</html>

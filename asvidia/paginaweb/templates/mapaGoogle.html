@@ -1,0 +1,1041 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Rundal - Modern Multi-Purpose HTML5 Template</title>
+      <!--Mega Tags-->
+      <meta name="description" content="The Multi-Purpose HTML5 Template">
+      <meta name="keywords" content="The Multi-Purpose HTML5 Template">
+      <meta name="author" content="separateweb">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="theme-color" content="#fff">
+      <!--Website Favicon Logo-->
+      <link href="{% static 'website/images/favicon.png' %}" rel="icon">
+      <!--Plugin CSS Files-->
+      <link href="{% static 'website/css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/all.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/css.plugin.css' %}" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      <!--Custom CSS File-->   
+      <link href="{% static 'website/css/theme.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/responsive.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="crossorigin=""/>
+      <link rel="stylesheet" type="text/css" href="mapDevol.css">
+      <!--<link rel="stylesheet" type="text/css" href="Leaflet-Minimap-master/dist/Control.MiniMap.min.css"-->   
+   </head>
+   <body>
+   <!-- Start Preloader -->
+      <div class="preloader">				
+         <div class="loaderlogo">
+            <img src="{% static 'website/images/logo-dark.svg' %}">
+            <p>Loading... Please Wait</p>
+            <div class="dashedborder"></div>
+         </div>
+      </div>	
+   <!-- // -->
+
+   <!-- Header -->
+   <h1>CustomMapWMSDevol</h1>
+
+      <select name="select-location" id="select-location">
+        <option value="-1">Seleccionar la zona deseada</option>
+        <option value="37.38264,-5.996295">Sevilla [Andalucía]</option>
+        <option value="41.65629,-0.8765379">Zaragoza [Aragón]</option>
+        <option value="43.36026,-5.844759">Oviedo [Asturias]</option>
+        <option value="28.12482,-15.43001">Palmas de Gran Canaria (Las) [Islas Canarias]</option>
+        <option value="43.46096,-3.807934">Santander [Cantabria]</option>
+        <option value="39.85678,-4.024476">Toledo [Castilla-La Mancha] </option>
+        <option value="41.65295,-4.728388">Valladolid [Castilla y León]</option>
+        <option value="41.38792,2.169919">Barcelona [Cataluña]</option>
+        <option value="38.91586,-6.345606">Mérida [Extremadura]</option>
+        <option value="43.37087,-8.395835">Coruña (A) [Galicia]</option>
+        <option value="39.56951,2.649966">Palma [Islas Baleares]</option>
+        <option value="42.46577,-2.449995">Logroño [La Rioja]</option>
+        <option value="40.41669,-3.700346">Madrid [Madrid]</option>
+        <option value="37.98344,-1.12989">Murcia [Murcia]</option>
+        <option value="42.81721,-1.646767">Pamplona [Navarra]</option>
+        <option value="42.84641,-2.667893">Vitoria [País Vasco]</option>
+        <option value="39.47024,-0.3768049">Valencia [Comunidad Valenciana]</option>
+      </select>
+      <header class="rundal-header animation header-light alert-header fixed-top">
+         <div class="alert alert-sw  alert-dismissible fade show" role="alert">
+            <p>Limited Time Festive Season Offer. Get 30% discount on all the courses.  <a href="#">Enrol Now</a></p>           
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+         <div class="container-fluid">
+            <div class="menu-header">
+               <div class="menu-logo">
+                  <div class="website-logo">
+                     <a href="index.html" class="brandlogo">
+                     <img src="{% static 'website/images/logo-white.svg' %}" alt="logo" class="light">
+                     <img src="{% static 'website/images/logo-dark.svg' %}" alt="logo" class="dark">
+                     </a>
+                  </div>
+               </div>
+               <div class="rundal-nav">
+                  <nav class="navbar navbar-expand-lg">
+                     <div class="container-fluid">
+                        <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="offcanvasmenu-sw" aria-labelledby="offcanvasExampleLabel">
+                           <div class="offcanvas-header d-flex d-lg-none">
+                              <div class="offcanvas-title" id="offcanvasExampleLabel"><img src="{% static 'website/images/logo-dark.svg' %}" alt="logo" class="sidebarlogo"></div>
+                              <a href="javascript:void(0)" class="text-reset p-0" data-bs-dismiss="offcanvas" aria-label="close">✖︎</a>
+                           </div>
+                           <div class="offcanvas-body p-lg-0">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown sw-megamenu">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Home Demo</a>
+                                    <div class="dropdown-menu megamenu" role="menu">
+                                       <div class="megamenucontent">
+                                          <div class="container">
+                                             <div class="row border-in-colmn">
+                                                <div class="col bdright">
+                                                   <div class="demoimages shadow">
+                                                      <a href="demo-1.html"><img src="{% static 'website/images/demo-images/home-1.jpg' %}" alt="img"></a>                                                      
+                                                   </div>
+                                                   <a href="demo-1.html" class="demotitle">Mapa QGIS</a>
+                                                </div>
+                                                <div class="col bdright">
+                                                   <div class="demoimages shadow">
+                                                      <a href="demo-2.html"><img src="{% static 'website/images/demo-images/home-2.jpg' %}" alt="img"></a>                                                     
+                                                   </div>
+                                                   <a href="demo-2.html" class="demotitle">Mapa Google</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">About us</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="about-1.html"> About Us Page 1</a></li>
+                                       <li><a class="dd-item" href="about-2.html"> About Us Page 2</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Services</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="service-1.html"> Service Page 1</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Service Page 2</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown sw-megamenu">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">All Pages</a>
+                                    <div class="dropdown-menu megamenu" role="menu">
+                                       <div class="megamenucontent">
+                                          <div class="container">
+                                             <div class="row border-in-colmn">
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Portfolio Page</li>
+                                                      <li><a class="dd-item" href="portfolio-1.html"><i class="fa-solid fa-briefcase"></i> Portfolio 3D</a></li>
+                                                      <li><a class="dd-item" href="portfolio-2.html"><i class="fa-solid fa-briefcase"></i> Portfolio Load More</a></li>
+                                                      <li><a class="dd-item" href="portfolio-3.html"><i class="fa-solid fa-briefcase"></i> Portfolio Gallery</a></li>
+                                                      <li><a class="dd-item" href="portfolio-details-1.html"><i class="fa-solid fa-briefcase"></i> Portfolio Details</a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Blogs Page</li>
+                                                      <li><a class="dd-item" href="blog-page-1.html"><i class="fa-solid fa-square-rss"></i> Blog Page </a></li>
+                                                      <li><a class="dd-item" href="blog-details-1.html"><i class="fa-solid fa-square-rss"></i> Blog Details Page </a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Contact Us Page</li>
+                                                      <li><a class="dd-item" href="contact-us-1.html"><i class="fa-solid fa-circle-user"></i> Contact Us Page 1</a></li>
+                                                      <li><a class="dd-item" href="contact-us-2.html"><i class="fa-solid fa-circle-user"></i> Contact Us Page 2</a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col">
+                                                   <ul>
+                                                      <li class="dd-title">Other Pages</li>
+                                                      <li><a class="dd-item" href="pricing.html"><i class="fa-solid fa-file-lines"></i> Pricing Page</a></li>
+                                                      <li><a class="dd-item" href="faq.html"><i class="fa-solid fa-file-lines"></i> Accordion FAQ</a></li>
+                                                      <li><a class="dd-item" href="login.html"><i class="fa-solid fa-file-lines"></i> Login</a></li>
+                                                      <li><a class="dd-item" href="register.html"><i class="fa-solid fa-file-lines"></i> Register</a></li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <div class="rundal-nav-cta">
+                  <ul class="sw-menu-sw-set">
+                     <li><a href="login.html" class="r-g-btn r-g-btn-1 btn-head"> Log In </a> </li>
+                     <li><a href="contact-us-1.html" class="r-g-btn r-g-btn-2 btn-head"> Get started </a> </li>
+                     <li class="sidebarmenuicon"><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasmenu-sw" aria-controls="offcanvasmenu-sw"><i class="fa-solid fa-bars-staggered"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      
+      <!-- Header End -->
+      
+      <!-- hero section -->
+      <section class="demo-2-hero line-2-bg">
+         <div class="container">
+            <div class="row vcenter">
+               <div class="col-lg-6">
+                  <div class="hero-content">
+                     <span class="subtitleheading" data-cue="slideInUp" data-delay="100">✦ Rundal Internship</span>
+                     <h1 class="cd-headline rotate-1" data-cue="slideInUp" data-delay="400"> Launch your Career with 100% Placement <span class="cd-words-wrapper"> <b class="is-visible">Assitance</b> <b>Guidance</b><b>Assurity</b> </span>
+                     </h1>
+                     <p class="mt30" data-cue="slideInUp" data-delay="600">Discover how you can apply your talent and skills to harness powerful change with our career-building student programs.</p>
+                     <div class="pair-btn mt30" data-cues="slideInUp" data-delay="800">
+                        <a href="#" class="r-g-btn r-g-btn-1">Get Started <span>- it's free</span> </a>
+                        <a href="#" class="inine-btn">How It Works</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 mmt40">
+                  <div class="demo-2-img" data-cues="slideInUp" data-delay="200">
+                     <div class="ct-index">
+                        <div class="round-text">
+                           <img src="   {% static 'website/images/common/circled-text.svg' %}" alt="logo" class="texts">
+                           <img src="{% static 'website/images/common/circle-logo.png' %}" alt="logo" class="innerlogo">
+                        </div>
+                     </div>
+                     <div class="hero-intrn shadow"><img src="{% static 'website/images/common/student.jpg' %}" alt="img" class="img-fluid"></div>
+                     <div class="hero-img-tags">
+                        <p class="hitt1"><i class="fa-regular fa-circle-check mr5"></i> Project-Oriented Learning</p>
+                        <p class="hitt2"><i class="fa-regular fa-circle-check mr5"></i> Get a Course Certificate</p>
+                        <p class="hitt3 ani-rvc"><i class="fa-regular fa-circle-check mr5"></i> 24/7 Customer Support</p>
+                     </div>
+                     <div class="dotnlinepattern">
+                        <div class="dot-square dot-1x"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+
+      <!-- block -->
+      <section class="portfolio-home sec-pad sw-bg-2-wave">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-6 text-center text-white">
+                  <h2>Why You Should Choose Internship</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+               </div>
+            </div>
+            <div class="row mt30">
+               <div class="col-lg-8 col-md-12 mt30 padding-right-80">
+                  <div class="img-card-big-video roundimg">
+                     <a class="video-play" href="https://www.youtube.com/watch?v=Aty3TV4Yn4I">
+                        <div class="video-button"> <span class="play-btn"> <i class="fa fa-play"></i> </span> </div>
+                        <img src=" {% static 'website/images/common/online-communication.jpg' %}" alt="img" class="w-100">
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-12 mt30 mmt40">
+                  <div class="sw-icon-line-media-ojbct text-white" data-cues="slideInRight" data-delay="200">
+                     <div class="media">
+                        <div class="bsicon"><img src="{% static 'website/images/icons/graphic-designer.png' %}" alt="img"></div>
+                        <div class="bstext">
+                           <h4>Content designed by IIT & Stanford alumni</h4>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                     </div>
+                     <div class="media mt40">
+                        <div class="bsicon"><img src="{% static 'website/images/icons/binary-code.png' %}" alt="img"></div>
+                        <div class="bstext">
+                           <h4>Content designed by IIT & Stanford alumni</h4>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                     </div>
+                     <div class="media mt40">
+                        <div class="bsicon"><img src="{% static 'website/images/icons/meda2.png' %}" alt="img"></div>
+                        <div class="bstext">
+                           <h4>Content designed by IIT & Stanford alumni</h4>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+      {% static 'website/' %}
+      <!--brand section -->
+      <div id="mapDevol">
+    
+        
+
+      </div>
+      <section class="brands sec-pad bg-city-1" data-background="images/shape/building.png">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-6 text-center">
+                  <h2>1000+ Enterprises Love Us</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+               </div>
+            </div>
+            <div class="row mt60">
+               <div class="col-md-12">
+                  <div class="logo---set owl-carousel">
+                     <div class="logo--inner-div">  <img src="{% static 'website/images/brands/logo-1.png' %}" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-2.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-3.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-4.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-5.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-6.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-7.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-8.png" alt="img"> </div>
+                     <div class="logo--inner-div">  <img src="images/brands/logo-9.png" alt="img"> </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+      <!-- Courses block -->
+      <section class="portfolio-home sec-pad rg-bg-1">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-5">
+                  <h2>Popular Live Courses</h2>
+                  <p class="mt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+               </div>
+            </div>
+            <div class="row mt15" data-cues="slideInUp" data-delay="200">
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-1.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-2.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-3.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-4.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-5.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 mt30">
+                  <div class="img-card-div">
+                     <a href="#">
+                        <div class="portfolioimg roundimg shadow"><img src="images/common/course-6.jpg" alt="course"></div>
+                        <div class="cardofdata">
+                           <div class="carttitleh3">
+                              <h3>Human Resource Management Specialization</h3>
+                              <p>The fastest way to launch your career - Launch Now!</p>
+                              <ul class="course-feature">
+                                 <li>
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <span>2 courses</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>2 projects</span>
+                                 </li>
+                                 <li>
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span>6 months</span>
+                                 </li>
+                              </ul>
+                              <div class="coursefee">
+                                 <h5>$400 <span>$600</span></h5>
+                                 <p>Know More</p>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+      <!-- Product block -->
+      <section class="why-choose-us sec-pad">
+         <div class="container">
+            <div class="row justify-content-center text-center">
+               <div class="col-lg-6">
+                  <h2>Our Products</h2>
+                  <p class="mt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+               </div>
+            </div>
+            <div class="row mt30" data-cues="slideInUp" data-delay="200">
+               <div class="col-lg-4 mt30">
+                  <div class="productcards hover-base swhovr">
+                     <div class="imagesdiv bgcirclecard"><img src="images/common/dashboard.png" alt="img" class="hover-this"></div>
+                     <div class="datadivs">
+                        <h3>Job Portal</h3>
+                        <h5>Take a look to our work</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.</p>
+                        <a href="#" class="inine-btn mt30">Learn More <i class="fa-solid fa-arrow-trend-up ml10"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 mt30">
+                  <div class="productcards hover-base swhovr">
+                     <div class="imagesdiv bgcirclecard"><img src="images/common/girl-2.png" alt="img" class="hover-this"></div>
+                     <div class="datadivs">
+                        <h3>Career Consultancy</h3>
+                        <h5>Take a look to our work</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.</p>
+                        <a href="#" class="inine-btn mt30">Learn More <i class="fa-solid fa-arrow-trend-up ml10"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 mt30">
+                  <div class="productcards hover-base swhovr">
+                     <div class="imagesdiv bgcirclecard"><img src="images/common/aff-marketing.png" alt="img" class="hover-this"></div>
+                     <div class="datadivs">
+                        <h3>Job Portal</h3>
+                        <h5>Take a look to our work</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.</p>
+                        <a href="#" class="inine-btn mt30">Learn More <i class="fa-solid fa-arrow-trend-up ml10"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+
+      <!-- cta block -->
+      <div class="container mb100">
+         <div class="cta-block shadow cta-bg" data-background="images/shape/cta-bg-1.svg">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="divblockcta">
+                     <div class="cta-textblock">
+                        <h2>Get a Digital Solution For Your Company That is Made Just For You.</h2>
+                        <a href="#" class="r-g-btn r-g-btn-1 mt30 mt30">Start Your Free Trial</a>
+                     </div>
+                     <div class="ctaimgblock">
+                        <p>We have a skilled tech-savvy team of developers that works on clients' projects efficiently and delivers the project right on time.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- // -->
+      
+      <!-- Certificate block -->
+      <section class="sec-pad text-white sw-bg-2-wave">
+         <div class="container">
+            <div  class="row justify-content-between">
+               <div class="col-lg-5 padding-left-80">
+                  <div class="aboutdiv">
+                     <span class="subtitleheading">Certificate</span>
+                     <h2>Verifiable Certificate of Accomplishment</h2>
+                     <p class="mt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                     <a href="#" class="r-g-btn r-g-btn-1 mt30">Apply Now</a>
+                  </div>
+               </div>
+               <div class="col-lg-6 mmt40 flowcolmn" data-cues="slideInRight" data-delay="200">
+                  <div class="roundimg shadow">
+                     <img src="images/common/certificate.jpg" alt="certificate">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+
+      <!-- customer review -->
+      <section class=" sec-pad rg-bg-1">
+         <div class="container">
+            <div class="row justify-content-center text-center">
+               <div class="col-lg-6">
+                  <h2>Our Learners Thought About us</h2>
+                  <p class="mt15">Get inspired by these stories.</p>
+               </div>
+            </div>
+            <div class="row mt30">
+               <div class="col-lg-12">
+                  <div class="testimonial-row mt30" data-cues="slideInUp" data-delay="200">
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-1.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-1.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua sed do eiusmod tempor incididunt ut.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-2.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-2.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua. Lorem ipsum dolor sit amet.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-3.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-3.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-4.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-4.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-5.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-5.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-6.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-6.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-7.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-7.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-8.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-8.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="reviewcard">
+                        <div class="r-g-card shadow">
+                           <div class="reviewer-with-source media">
+                              <div class="reviewer-info media">
+                                 <div class="reviewerimg"><img src="images/team/team-9.jpg" alt="img"></div>
+                                 <div class="reviewrdata">
+                                    <h5>Petey Cruiser</h5>
+                                    <p>Data Scientist</p>
+                                 </div>
+                              </div>
+                              <div class="reviewsource"><img src="images/brands/brand-9.svg" alt="img"></div>
+                           </div>
+                           <div class="review-content mt20">
+                              <h5>Qualty Service</h5>
+                              <p class="mt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- cta blocks -->
+      <div class="bloghomediv sec-pad rg-bg-0">
+         <div class="container">
+            <div class="row justify-content-between vcenter">
+               <div class="col-lg-5">
+                  <div class="two-image dot-image">
+                     <div class="image-0-1 roundimg-x shadow" data-cue="slideInLeft" data-delay="100">  <img src="images/common/office-1.jpg" alt="about">  </div>
+                     <div class="image-0-2 roundimg-x shadow" data-cue="slideInRight" data-delay="400">  <img src="images/common/office-2.jpg" alt="about">  </div>
+                  </div>
+               </div>
+               <div class="col-lg-5 mmt40" data-cues="slideInUp" data-delay="200">
+                  <h2>Take the next step toward your personal and professional goals with Internship.</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <div class="pair-btn mt30">
+                     <a href="#" class="r-g-btn r-g-btn-1">Start Your Project</a>    
+                     <a href="#" class="dialnumber"><span>or Call Us</span>+91 123 4567 890</a>              
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- // -->
+      <!--feature block -->
+      <div class="uniquepointsblock text-white paragraph sw-bg-2-wave">
+         <div class="container">
+            <div class="row" data-cues="fadeIn" data-delay="200">
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="unqpnt-2">
+                     <img src="images/icons/calendar.png" alt="img" class="mb20">
+                     <h5>6 Week/day Online Classes</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut magna.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="unqpnt-2">
+                     <img src="images/icons/customer-service.png" alt="img" class="mb20">
+                     <h5>12 Months Career Support</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut magna.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="unqpnt-2">
+                     <img src="images/icons/rupee.png" alt="img" class="mb20">
+                     <h5>Affordable Course Fee</h5>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut magna.</p>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mt30">
+                  <div class="unqpnt-2">
+                     <img src="images/icons/boy.png" alt="img" class="mb20">
+                     <h5>Eligibility Criteria</h5>
+                     <p<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut magna.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--feature block -->
+
+      <!--faq block-->
+      <section class="sec-pad">
+         <div class="container">
+            <div class="row v-center justify-content-center">
+               <div class="col-lg-12">
+                  <span class="subtitleheading">Have a Doubt?</span>
+                  <h2>Frequently Asked Question</h2>
+                  <div class="sw-faq mt60">
+                     <div class="accordion" id="accordionExample" data-cues="slideInUp" data-delay="200">
+                        <!-- faq item 1 -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="heading1">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-sw-1" aria-expanded="true" aria-controls="faq-sw-1">
+                              Why do I need a mobile-friendly website?
+                              </button>
+                           </h2>
+                           <div id="faq-sw-1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                 This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.
+                              </div>
+                           </div>
+                        </div>
+                        <!-- faq item 2 -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="heading2">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-sw-2" aria-expanded="false" aria-controls="faq-sw-2">
+                              Which Technology or Tools used for Website Designing?
+                              </button>
+                           </h2>
+                           <div id="faq-sw-2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                 This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.
+                              </div>
+                           </div>
+                        </div>
+                        <!-- faq item 3 -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="heading3">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-sw-3" aria-expanded="false" aria-controls="faq-sw-3">
+                              What is the difference between custom and ready-to-use software?
+                              </button>
+                           </h2>
+                           <div id="faq-sw-3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                 This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.
+                              </div>
+                           </div>
+                        </div>
+                        <!-- faq item 4 -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="heading4">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-sw-4" aria-expanded="false" aria-controls="faq-sw-4">
+                              Which is the best custom software development company in India?
+                              </button>
+                           </h2>
+                           <div id="faq-sw-4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                 This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.
+                              </div>
+                           </div>
+                        </div>
+                        <!-- faq item 5 -->
+                        <div class="accordion-item">
+                           <h2 class="accordion-header" id="heading5">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-sw-5" aria-expanded="false" aria-controls="faq-sw-5">                      
+                              What are the RCM challenges faced by hospitals?                                    
+                              </button>
+                           </h2>
+                           <div id="faq-sw-5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                 This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the though the transition does limit overflow.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- // -->
+
+   <!-- roll text -->
+      <div class="separatewebhranimation  menusw">
+         <div class="marquee__inner animation-2" aria-hidden="true">
+            <ul class="marquee-item-list">
+               <li><span>We Build Brands</span><span class="alternate">✦</span></li>
+               <li><span>Focus on Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Grow Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Build Your Audience</span><span class="alternate">✦</span></li>
+               <li><span>Gain More Traffic</span><span class="alternate">✦</span></li>
+               <li><span>Increase Brand Awareness</span><span class="alternate">✦</span></li>
+               <li><span>Develop Global Presence</span><span class="alternate">✦</span></li>
+               <li><span>We Build Brands</span><span class="alternate">✦</span></li>
+               <li><span>Focus on Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Grow Your Business</span><span class="alternate">✦</span></li>
+               <li><span>Build Your Audience</span><span class="alternate">✦</span></li>
+               <li><span>Gain More Traffic</span><span class="alternate">✦</span></li>
+               <li><span>Increase Brand Awareness</span><span class="alternate">✦</span></li>
+               <li><span>Develop Global Presence</span><span class="alternate">✦</span></li>
+            </ul>
+         </div>
+      </div>
+      <!--// roll text -->
+      <!-- footer block -->
+      <footer class="footerthree infooter">
+         <div class="container">
+            <div class="row justify-content-between">
+               <div class="col-lg-6 right-border-footer">
+                  <div class="row justify-content-between">
+                     <div class="col-lg-6 col-md-6 text-white">
+                        <a href="#"><img src="images/logo-white.svg" alt="footer logo" class="footer-logo"> </a>
+                        <div class="contactnumberdiv mt30">
+                           <p class="mb15 linktitle">Inquiries</p>
+                           <a href="#"><i class="fa-solid fa-tty mr10"></i> 91 123 4567 890</a>
+                           <a href="#"><i class="fa-brands fa-whatsapp mr10"></i> 91 123 4567 890</a>
+                           <a href="#"><i class="fa-solid fa-envelope mr10"></i> hr@yourwebsite.com</a>                          
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-6 fthead m-mt40">
+                        <div class="infobblk text-white">
+                           <h5>Follow Us</h5>
+                           <ul class="socialmedia">
+                              <li><a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a></li>
+                              <li><a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a></li>
+                              <li><a href="javascript:void(0)"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                              <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a></li>
+                              <li><a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a></li>
+                           </ul>
+                        </div>
+                        <div class="email-form mt20">
+                           <p class="text-white">Subscribe to our newsletter.</p>
+                           <form>
+                              <div class="email-block">
+                                 <input type="email" placeholder="Enter Email Address">
+                                 <button type="submit" class="r-g-btn rg-bg-3x"><i class="fa-solid fa-arrow-right-long deg45"></i></button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-5 col-md-6 fthead text-white link-hover">
+                  <div class="row mmt40">
+                     <div class="col-lg-6 col-md-6">
+                        <h5 class="collapsible">Company</h5>
+                        <ul class="footer-links-list content">
+                           <li><a href="javascript:void(0)">About Us </a></li>
+                           <li><a href="javascript:void(0)">Contact Us</a></li>
+                           <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                           <li><a href="javascript:void(0)">Term of Service</a></li>
+                           <li><a href="javascript:void(0)">Sitemap</a></li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <h5 class="collapsible">Resource</h5>
+                        <ul class="footer-links-list content">
+                           <li><a href="javascript:void(0)">Artificial Intelligence </a></li>
+                           <li><a href="javascript:void(0)">Data Science </a></li>
+                           <li><a href="javascript:void(0)">Internet of Things </a></li>
+                           <li><a href="javascript:void(0)">Web Development </a></li>
+                           <li><a href="javascript:void(0)">Digital Marketing </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>        
+         <div class="footer-end text-white">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-5">
+                     <div class="ft-copyright">
+                        <p>© 2022 SeparateWeb. All Rights Reserved.</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-7">
+                     <div class="ft-linkz link-hover">                    
+                        <a href="#">Sitemap </a>                   
+                        <a href="#">Privacy Policy </a>                                          
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- // -->
+      {% static 'website/' %}
+      <!-- back to top -->
+      <div class="progress-wrap">
+         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"> <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg>
+      </div>
+
+      <!--Plugin Js Files -->
+      <script src="{% static 'website/js/jquery.min.js' %}"></script>   
+      <script src="{% static 'website/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'website/js/min.plugin.js' %}"></script>
+      <script src="{% static 'website/js/scrollloop.min.js' %}"></script>  
+      <script src="{% static 'website/js/roundscroll.js' %}"></script>
+      <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="crossorigin=""></script>
+      <!--<script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>--> 
+      <script src="{% static 'website/js/mapDevol.js' %}"></script>   
+      <!--Custom Js File -->   
+      <script src=" {% static 'website/js/custom.js' %}"></script>      
+   </body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      {% block title %}Iniciar sesión{% endblock %}
+      <!--Mega Tags-->
+      <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
+      <script src="https://openlayers.org/en/latest/build/ol.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   </head>
+   <body>
+      {% autoescape off %}
+      {{ content }}
+      {% endautoescape %}
+         
+   </body>
+</html>

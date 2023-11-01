@@ -1,0 +1,16 @@
+#mapDevol{
+    height: 90vh;
+    width: 100hw;
+}
+
+h1{
+    color:aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+select{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

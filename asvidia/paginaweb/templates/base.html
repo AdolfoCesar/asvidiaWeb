@@ -1,0 +1,355 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Asvidia</title>
+      <!--Mega Tags-->
+      <meta name="description" content="Modern Multi Purpose HTML5 Template">
+      <meta name="keywords" content="Modern Multi Purpose HTML5 Template">
+      <meta name="author" content="separateweb">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="theme-color" content="#fff">
+      <!--Website Favicon Logo-->
+      <link href="{% static 'website/images/favicon.png' %}" rel="icon">
+      <!--Plugin CSS Files-->
+      <link href="{% static 'website/css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/all.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/css.plugin.css' %}" rel="stylesheet">
+      <!-- google font url -->
+      <link href="{% static 'website/https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap' %}" rel="stylesheet">
+      <!--template main theme and style css file-->   
+      <link href="{% static 'website/css/theme.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'website/css/responsive.css' %}" rel="stylesheet">
+      <!-- cookieconsent css -->
+      <link rel="stylesheet" href=" {% static 'website/css/cookieconsent.css' %}" media="print" onload="this.media='all'">
+      
+   </head>
+   <body>
+   <!-- Start Preloader -->
+      <div class="preloader">				
+         <div class="loaderlogo">
+            <img src="{% static 'website/images/logo-dark.svg' %}">
+            <p>Cargando...por favor espere</p>
+            <div class="dashedborder"></div>
+         </div>
+      </div>	
+   <!-- // -->
+   
+   <!-- Header -->
+      {% block header %}
+      <header class="rundal-header fixed-top animation header-light">
+         <div class="container-fluid">
+            <div class="menu-header">
+               <div class="menu-logo" style="width: 500px;">
+                  <div class="website-logo">
+                     <img src="{% static 'website/images/icons/logoasvidia.jpg'' %}" alt="logo" class="dark" style="height: 800px; width: 300px;">
+                  </div>
+               </div>
+               <div class="rundal-nav">
+                  <nav class="navbar navbar-expand-lg">
+                     <div class="container-fluid">
+                        <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="offcanvasmenu-sw" aria-labelledby="offcanvasExampleLabel">
+                           <div class="offcanvas-header d-flex d-lg-none">
+                              <div class="offcanvas-title" id="offcanvasExampleLabel"><img src="{% static 'website/images/logo-dark.svg' %}" alt="logo" class="sidebarlogo"></div>
+                              <a href="javascript:void(0)" class="text-reset p-0" data-bs-dismiss="offcanvas" aria-label="close">✖︎</a>
+                           </div>
+                           <div class="offcanvas-body p-lg-0">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown sw-megamenu">
+                                    <a class="nav-link dropdown-toggle" href="home.html">INICIO</a>
+                                    <div class="dropdown-menu megamenu" role="menu">
+                                       <div class="megamenucontent">
+                                          <div class="container">
+                                             <div class="row border-in-colmn" data-cue="slideInUp" data-delay="100">
+                                                <div class="col bdright">
+                                                   <div class="demoimages shadow">
+                                                                                                        
+                                                   </div>
+                                                   
+                                                </div>
+                                                <div class="col bdright">
+                                                   <div class="demoimages shadow">
+                                                                                                        
+                                                   </div>
+                                                   
+                                                </div>
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">CONÓCENOS</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="quienes-somos.html"> Quienes somos</a></li>
+                                       <li><a class="dd-item" href="estatutos.html"> Estatutos de la asociación</a></li>
+                                       <li><a class="dd-item" href="miembros.html"> Miembros de la junta directiva</a></li>
+                                       <li><a class="dd-item" href="about-2.html"> Equipo de monitores</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">ACTIVIDADES</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <div class="col bdright">
+                                          <div class="demoimages shadow">
+                                             <a href="conferencias.html"><img src="{% static 'website/images/demo-images/home-3.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="conferencias.html" class="demotitle">Conferencias</a>
+                                       </div>
+                                       <div class="col bdright">
+                                          <div class="demoimages shadow">
+                                             <a href="cursillos.html"><img src="{% static 'website/images/demo-images/home-4.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="cursillos.html" class="demotitle">Cursillos</a>
+                                       </div>
+                                       <div class="col">
+                                          <div class="demoimages shadow">
+                                             <a href="excursiones.html"><img src="{% static 'website/images/demo-images/home-5.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="excursiones.html" class="demotitle">Excursiones</a>
+                                       </div>
+                                       <div class="col">
+                                          <div class="demoimages shadow">
+                                             <a href="colonias.html"><img src="{% static 'website/images/demo-images/home-5.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="colonias.html" class="demotitle">Colonias</a>
+                                       </div>
+                                       <div class="col">
+                                          <div class="demoimages shadow">
+                                             <a href="convivencias.html"><img src="{% static 'website/images/demo-images/home-5.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="convivencias.html" class="demotitle">Convivencias fin de semana</a>
+                                       </div>
+                                       <div class="col">
+                                          <div class="demoimages shadow">
+                                             <a href="talleres.html"><img src="{% static 'website/images/demo-images/home-5.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="talleres.html" class="demotitle">Talleres de Educación Diabetológica</a>
+                                       </div>
+                                       <div class="col">
+                                          <div class="demoimages shadow">
+                                             <a href="demo-5.html"><img src="{% static 'website/images/demo-images/home-5.jpg' %}" alt="img"></a>                                                      
+                                          </div>
+                                          <a href="demo-5.html" class="demotitle">Otros servicios</a>
+                                       </div>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">NIÑXS Y ADOLESCENTES</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="colonias.html"> Colonias ¿Campamentos?</a></li>
+                                       <li><a class="dd-item" href="acompaniamientos.html"> Servicio de acompañamientos</a></li>
+                                       <li><a class="dd-item" href="pautas.html"> Pautas de actuación</a></li>
+                                       <li><a class="dd-item" href="circular.html"> Circular de Atención Sanitaria especial durante el horario escolar</a></li>
+                                       
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">TÚ Y LA DIABETES</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="carol.html"> "Carol tiene diabetes"</a></li>
+                                       <li><a class="dd-item" href="diabetes-t1.html"> Diabetes Mellitus Tipo 1</a></li>
+                                       <li><a class="dd-item" href="diabetes-t2.html"> Diabetes Mellitus Tipo 2</a></li>
+                                       <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Autocontrol</a>
+                                        <ul class="dropdown-menu signledropdown">
+                                            <li><a class="dd-item" href="diabetes-t2.html"> Dieta</a></li>
+                                            <li><a class="dd-item" href="diabetes-t2.html"> Ejercicio</a></li>
+                                            <li><a class="dd-item" href="diabetes-t2.html"> Insulina</a></li>
+                                        </ul>
+                                       <li><a class="dd-item" href="service-2.html"> Educación</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">PUBLICACIONES</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="service-1.html"> Artículos</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Revistas</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Documentos y Libros</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Conferencias</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Links</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">COLABORA</a>
+                                    <ul class="dropdown-menu signledropdown">
+                                       <li><a class="dd-item" href="service-1.html"> Hazte voluntario</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Hazte socio</a></li>
+                                       <li><a class="dd-item" href="service-2.html"> Contactar</a></li>
+                                    </ul>
+                                 </li>
+                                 <!--<li class="nav-item dropdown sw-megamenu">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"></a>
+                                    <div class="dropdown-menu megamenu" role="menu">
+                                       <div class="megamenucontent">
+                                          <div class="container">
+                                             <div class="row border-in-colmn">
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Portfolio Page</li>
+                                                      <li><a class="dd-item" href="portfolio-1.html"><i class="fa-solid fa-briefcase"></i> Portfolio 3D</a></li>
+                                                      <li><a class="dd-item" href="portfolio-2.html"><i class="fa-solid fa-briefcase"></i> Portfolio Load More</a></li>
+                                                      <li><a class="dd-item" href="portfolio-3.html"><i class="fa-solid fa-briefcase"></i> Portfolio Gallery</a></li>
+                                                      <li><a class="dd-item" href="portfolio-details-1.html"><i class="fa-solid fa-briefcase"></i> Portfolio Details</a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Blogs Page</li>
+                                                      <li><a class="dd-item" href="blog-page-1.html"><i class="fa-solid fa-square-rss"></i> Blog Page </a></li>
+                                                      <li><a class="dd-item" href="blog-details-1.html"><i class="fa-solid fa-square-rss"></i> Blog Details Page </a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col bdright">
+                                                   <ul>
+                                                      <li class="dd-title">Contact Us Page</li>
+                                                      <li><a class="dd-item" href="contact-us-1.html"><i class="fa-solid fa-circle-user"></i> Contact Us Page 1</a></li>
+                                                      <li><a class="dd-item" href="contact-us-2.html"><i class="fa-solid fa-circle-user"></i> Contact Us Page 2</a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="col">
+                                                   <ul>
+                                                      <li class="dd-title">Other Pages</li>
+                                                      <li><a class="dd-item" href="pricing.html"><i class="fa-solid fa-file-lines"></i> Pricing Page</a></li>
+                                                      <li><a class="dd-item" href="faq.html"><i class="fa-solid fa-file-lines"></i> Accordion FAQ</a></li>
+                                                      <li><a class="dd-item" href="login.html"><i class="fa-solid fa-file-lines"></i> Login</a></li>
+                                                      <li><a class="dd-item" href="registro"><i class="fa-solid fa-file-lines"></i> Registro</a></li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </li>-->
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </header>
+      {% endblock %}
+
+
+{% block content %}
+
+
+{% endblock %}
+
+<!-- footer block -->
+{% block footer %}
+<footer class="footerdiv">
+   <div class="footer-first">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-7">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="footertitle">
+                        <span class="subtitleheading">¿Quieres contactar con nosotros?</span>
+                        <h3>Encuentranos en:</h3>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6 fthead mt40">
+                     <h5>Contactos</h5>
+                     <ul class="footer-links-list">
+                        <li><a href="tel:+1234567890"><i class="fa-solid fa-phone"></i> +34 944 446 606</a></li>
+                        <li><a href="tel:+1234567890"><i class="fa-brands fa-whatsapp fw6"></i> +91 1234 56790</a></li>
+                        <li><a href="mailto:info@website.com"><i class="fa-solid fa-at"></i> info@asvidia.org</a></li>
+                        <li><a href="#"><i class="fa-brands fa-skype"></i> Rundal.Company</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 fthead mt40">
+                     <h5>Nuestras redes</h5>
+                     <ul class="footer-links-list">
+                        <li><a href="javascript:void(0)"> <i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-instagram fw6"></i> Instagram</a></li>
+                        <li><a href="javascript:void(0)"><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-5 mmt40">
+               <div class="form-block">
+                  <h3>Por favor rellene el formulario.</h3>
+                  <form action="#" id="contactform" method="post">
+                     <div class="fieldsets row">
+                        <div class="col-md-6 form-group floating-label">
+                           <input type="text" placeholder=" " required="required" id="name" class="floating-input" name="fullname">
+                           <label>Nombre*</label>                                       
+                        </div>
+                        <div class="col-md-6 form-group floating-label">
+                           <input type="tel" placeholder=" " required="required" id="mobile_number" class="floating-input" name="mobile_number">
+                           <label>Número de teléfono*</label>                                       
+                        </div>
+                     </div>
+                     <div class="fieldsets row">
+                        <div class="col-md-6 form-group floating-label">
+                           <input type="email" placeholder=" " required="required" id="email" class="floating-input" name="email">
+                           <label>Correo*</label>                                       
+                        </div>
+                        <div class="col-md-6 form-group floating-label">
+                           <select required="required" id="interested_in" class="floating-select" name="interested_in">
+                              <option value="">&nbsp;</option>
+                              <option value="Graphic Design" >Graphic Design</option>
+                              <option value="Web Design" >Web Design</option>
+                              <option value="App Design" >App Design</option>
+                              <option value="Other" >Other</option>
+                           </select>
+                           <label>Interested In*</label>                                       
+                        </div>
+                     </div>
+                     <div class="fieldsets row">
+                        <div class="col-md-12 form-group floating-label">
+                           <textarea placeholder=" " required="required" id="description" class="floating-input" name="description"></textarea>
+                           <label>Comentario sobre la consulta*</label>                                       
+                        </div>
+                     </div>
+                     <div class="formfooter">
+                        <div class="fieldsets"> <button type="submit" name="submit" class="r-g-btn r-g-btn-1"><span>Enviar</span> </button> </div>
+                        <div class="custom-control custom-checkbox">
+                           <input type="checkbox" class="custom-control-input" id="agree" name="agree" checked="checked">
+                           <label class="custom-control-label ctmlabl" for="agree">Acepto y entiendo los <a href="javascript:void(0)">Términos &amp; Condiciones</a>.</label>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer-end border-top-dashed">
+      <div class="container">
+      </div>
+   </div>
+</footer>
+{% endblock %}
+<!-- // -->
+
+<!-- back to top -->
+<div class="progress-wrap">
+   <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"> <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg>
+</div>
+
+<!--Plugin Js Files {% static 'website/' %}-->
+
+<script src="{% static 'website/js/jquery.min.js' %}"></script>   
+<script src="{% static 'website/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'website/js/min.plugin.js' %}"></script>
+<script src="{% static 'website/js/scrollloop.min.js' %}"></script>
+<script src="{% static 'website/js/roundscroll.js' %}"></script>
+<!-- cookieconsent js -->
+<script defer src="{% static 'website/js/cookieconsent.js' %}"></script>
+<script defer src="{% static 'website/js/cookieconsent-init.js' %}"></script>
+<!--Custom Js File -->   
+<script src="{% static 'website/js/custom.js' %}"></script>      
+</body>
+</html>
