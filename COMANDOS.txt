@@ -1,0 +1,7 @@
+ARRACAR ENTORNO: 
+
+1. asvidiaEnv\Scripts\activate
+
+2. cd asvidia
+
+3. python manage.py runserver
